@@ -1,0 +1,199 @@
+/* CSS Variables generated from Kigen.design */
+:root {
+  --bunker-50: #edf1f4;
+  --bunker-100: #d2dce5;
+  --bunker-200: #a8bdcd;
+  --bunker-300: #8ba0b0;
+  --bunker-400: #748693;
+  --bunker-500: #5f6e79;
+  --bunker-600: #4b5760;
+  --bunker-700: #384249;
+  --bunker-800: #272e33;
+  --bunker-900: #171c20;
+  --bunker-950: #0f1316;
+
+  /* Semantic Theme tokens */
+  --bg-app: var(--bunker-950);
+  --bg-surface: var(--bunker-900);
+  --bg-card: var(--bunker-800);
+  --bg-card-hover: var(--bunker-700);
+  --border-subtle: var(--bunker-800);
+  --border-default: var(--bunker-700);
+  --border-focus: var(--bunker-400);
+
+  --text-primary: var(--bunker-50);
+  --text-secondary: var(--bunker-200);
+  --text-muted: var(--bunker-400);
+
+  --accent-primary: #38bdf8;
+  --accent-hover: #0284c7;
+  --accent-active: #0369a1;
+  --danger: #ef4444;
+  --danger-hover: #dc2626;
+  --success: #10b981;
+  --warning: #f59e0b;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+input, textarea, [contenteditable="true"] {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+html, body, #root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom modern scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bunker-700);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bunker-600);
+}
+
+/* Base interactive elements */
+button {
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 1px;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: var(--accent-primary);
+  color: #050b14;
+  font-weight: 600;
+  padding: 6px 14px;
+}
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--accent-hover);
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background-color: var(--bunker-800);
+  color: var(--text-primary);
+  border: 1px solid var(--border-default);
+  padding: 5px 12px;
+}
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--bunker-700);
+  border-color: var(--bunker-500);
+}
+
+.btn-ghost {
+  padding: 4px 8px;
+  color: var(--text-secondary);
+}
+.btn-ghost:hover:not(:disabled) {
+  background-color: var(--bunker-800);
+  color: var(--text-primary);
+}
+
+.btn-danger {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 5px 12px;
+}
+.btn-danger:hover:not(:disabled) {
+  background-color: var(--danger);
+  color: #ffffff;
+}
+
+/* Form inputs */
+input[type="text"], select {
+  font-family: inherit;
+  font-size: 12px;
+  background-color: var(--bunker-950);
+  border: 1px solid var(--border-default);
+  color: var(--text-primary);
+  padding: 6px 10px;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+input[type="text"]:focus, select:focus {
+  border-color: var(--accent-primary);
+}
+
+/* Modals and Overlays */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 14, 18, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: 8px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+  max-width: 90vw;
+  animation: modal-appear 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modal-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
